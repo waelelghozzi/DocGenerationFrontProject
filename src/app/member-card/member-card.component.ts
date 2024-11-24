@@ -6,12 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./member-card.component.scss']
 })
 export class MemberCardComponent implements OnInit {
-  @Input() member!: { 
+  @Input() member!: {
+    id: string, 
     name: string; 
     designation: string; 
     bio: string; 
     avatarUrl: string;
-    
   };
 
   constructor() {}

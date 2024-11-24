@@ -19,11 +19,12 @@ import { EventsSectionComponent } from './events-section/events-section.componen
 import { RouterModule } from '@angular/router';
 import { MemberDetailsComponent } from './member-details/member-details.component';  // Import RouterModule
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component'; // Import the AppRoutingModule
+import { HomeComponent } from './home/home.component';
+import { EventCardComponent } from './event-card/event-card.component'; // Import the AppRoutingModule
 
 
 @NgModule({
-  declarations: [TabGroupBasicExample, HeaderComponent, DocumentsTableComponent, LoginComponent, HeroComponent, MembersSectionComponent,MemberCardComponent, EventsSectionComponent, MemberDetailsComponent, HomeComponent],
+  declarations: [TabGroupBasicExample, HeaderComponent, DocumentsTableComponent, LoginComponent, HeroComponent, MembersSectionComponent,MemberCardComponent, EventsSectionComponent, MemberDetailsComponent, HomeComponent, EventCardComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
