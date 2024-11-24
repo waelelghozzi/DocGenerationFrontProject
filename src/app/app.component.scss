@@ -1,5 +1,6 @@
 .app {
   display: inline;
+  background: url('../assets/v904-nunny-029.jpg');
 }
 
 .loged {
@@ -20,13 +21,4 @@
   top: 0;
   right: 0;
   cursor: pointer;
-}
-
-
-/* Header stays fixed at the top */
-
-/* Content section */
-.content {
-  padding-top: 60px; /* Same height as the header to prevent content from being hidden */
-  flex-grow: 1;
 }

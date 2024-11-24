@@ -15,10 +15,15 @@ import { RefreshService } from './services/refresh service/refresh.service';
 import { HeroComponent } from './hero/hero.component';
 import { MemberCardComponent } from './member-card/member-card.component';
 import { MembersSectionComponent } from './members-section/members-section-component';
+import { EventsSectionComponent } from './events-section/events-section.component';
+import { RouterModule } from '@angular/router';
+import { MemberDetailsComponent } from './member-details/member-details.component';  // Import RouterModule
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component'; // Import the AppRoutingModule
 
 
 @NgModule({
-  declarations: [TabGroupBasicExample, HeaderComponent, DocumentsTableComponent, LoginComponent, HeroComponent, MembersSectionComponent,MemberCardComponent],
+  declarations: [TabGroupBasicExample, HeaderComponent, DocumentsTableComponent, LoginComponent, HeroComponent, MembersSectionComponent,MemberCardComponent, EventsSectionComponent, MemberDetailsComponent, HomeComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -29,7 +34,7 @@ import { MembersSectionComponent } from './members-section/members-section-compo
     ReactiveFormsModule,
     MatTableModule,
     HttpClientModule,
-    
+    AppRoutingModule
     ],providers:[RefreshService
     ,DocumentsTableComponent],
   bootstrap: [TabGroupBasicExample],
