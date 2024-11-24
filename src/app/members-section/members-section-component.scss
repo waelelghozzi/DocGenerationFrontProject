@@ -1,0 +1,47 @@
+.members-section {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; // Ensure the overflow is hidden in the parent container
+    width: 100%;
+    padding: 2rem 0rem 2rem 2rem;
+  }
+  
+  .members-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth; // Smooth scrolling effect
+    gap: 1rem;
+    padding: 1rem 0;
+    margin: 0 2rem; // Adjust margin to fit layout
+  }
+  .members-wrapper::-webkit-scrollbar {
+    display: none; /* Webkit-based browsers */
+  }
+  
+  .member-card {
+    flex: 0 0 auto; // Prevent flex shrinking or growing
+    width: 300px; // Adjust card size
+  }
+  
+  .scroll-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007bff;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .scroll-button:hover {
+    background-color: #0056b3;
+  }
+  

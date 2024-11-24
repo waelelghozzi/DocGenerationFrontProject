@@ -1,0 +1,36 @@
+/* Make the hero container take up the full height of the screen */
+.hero-container {
+    background-image: url('../../assets/milad-fakurian-nY14Fs8pxT8-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack the navbar and hero content vertically */
+  }
+  
+  /* Fix the navbar at the top */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999; /* Ensure the navbar is on top */
+    width: 100%;
+    padding: 10px 0; /* Adjust as needed */
+  }
+  
+  /* Ensure the hero content is not hidden under the fixed navbar */
+  .hero-container .d-flex {
+    margin-top: 70px; /* Adjust this value based on the navbar height */
+  }
+  
+  /* Style for the hero content */
+  .hero-content {
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-container .btn {
+    margin-top: 10px;
+  }
+  

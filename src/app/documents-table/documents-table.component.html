@@ -1,0 +1,119 @@
+<table mat-table [dataSource]="invoicesDataSource" class="mat-elevation-z8" matSort matSortActive="documentType" matSortDisableClear matSortDirection="desc" >
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- dowenload pdf Column -->
+    <ng-container matColumnDef="dowenloadPdf">
+      <th mat-header-cell *matHeaderCellDef style="width: 15px;"><img src='assets/down.png' alt="cedIcon" width="25" height="25"></th>
+      <td mat-cell *matCellDef="let element" >
+        <div *ngIf="element.currentStatusCode == 'Printed'">
+  
+         <img src='assets/pdfIcon.png' class="download-button"alt="cedIcon" width="20" height="25"  (click)="downloadFile(element.invoiceID,element.documentType)">
+         
+        </div>
+       
+      </td>
+    </ng-container>
+ <!-- dowenload Excel Column -->
+    <ng-container matColumnDef="dowenloadExcel">
+      <th mat-header-cell *matHeaderCellDef style="width: 15px;"> </th>
+      <td mat-cell *matCellDef="let element" >
+        
+        <div *ngIf="element.currentStatusCode == 'Printed' && element.documentType == 'SC'">
+  
+          <a><img src='assets/excel.png' (click)="downloadExcelFile(element.invoiceID,element.documentType)" class="download-button" alt="cedIcon" width="22" height="25" > </a> 
+          
+          
+         </div>
+      </td>
+    </ng-container>
+  <!-- generate Column -->
+    <ng-container matColumnDef="generate">
+      <th mat-header-cell *matHeaderCellDef style="width: 25px;">  <img src='assets/gendoc.png' alt="cedIcon" width="25" height="25"> </th>
+      <td mat-cell *matCellDef="let element">
+         
+        <div *ngIf="element.currentStatusCode == 'Not Printed' ">
+          
+          <a><img src='assets/gen.png' (click)="generateDocument(element.invoiceID,element.documentType)"class="download-button" [ngClass]= "{'ON': GenOn}" alt="cedIcon" width="25" height="28"> </a> 
+        </div>
+      
+      </td>
+    </ng-container>
+  
+    <!-- Document Type Column -->
+  <ng-container matColumnDef="documentType">
+    <th mat-header-cell *matHeaderCellDef   style="width: 150px;"> Document Type </th>
+    <td mat-cell *matCellDef="let element" > {{element.documentType}} </td>
+  </ng-container>
+  
+  <!-- Document Number Column -->
+  <ng-container matColumnDef="invoiceNumber">
+    <th mat-header-cell *matHeaderCellDef style="width: 200px;"> Document Number </th>
+    <td mat-cell *matCellDef="let element"> {{element.invoiceNumber}} </td>
+  </ng-container>
+
+  <!-- Creation date Column -->
+  <ng-container matColumnDef="creationDate">
+    <th mat-header-cell *matHeaderCellDef style="width: 180px;"> Creation Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.creationDate.slice(0, 10)}} </td>
+  </ng-container>
+
+
+  <!-- last Modified Date Column -->
+  <ng-container matColumnDef="lastModifiedDate">
+    <th mat-header-cell *matHeaderCellDef style="width: 180px;"> Last Modified Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.lastModifiedDate.slice(0, 10)}} </td>
+  </ng-container>
+
+  <!-- TypeFullName Column -->
+  <ng-container matColumnDef="documentTypeFullName">
+    <th mat-header-cell *matHeaderCellDef style="width: 200px;">Document Full Name</th>
+    <td mat-cell *matCellDef="let element"> {{element.documentTypeFullName}} </td>
+  </ng-container>
+  
+  
+  
+  <!-- Statue Column -->
+  <ng-container matColumnDef="currentStatusCode">
+    <th mat-header-cell *matHeaderCellDef style="width: 200px;"> Current Status </th>
+    <td mat-cell *matCellDef="let element">
+      
+      <div class="chip-printed" *ngIf="element.currentStatusCode == 'Printed'">
+      <div>{{element.currentStatusCode}}</div>
+      </div>
+      <div class="chip-open" *ngIf="element.currentStatusCode == 'Not Printed'">
+        <div>{{element.currentStatusCode}}</div>
+        </div>
+        <div class="chip-failed" *ngIf="element.currentStatusCode == 'GenerationFailed'">
+          <div>Generation Failed</div>
+          </div>
+      
+    
+    
+    </td>
+  </ng-container>
+  
+ 
+  <!-- isNewRepair Column -->
+  <ng-container  matColumnDef="isNewRepair">
+    <th mat-header-cell *matHeaderCellDef  style="width: 300px;"> New Repair </th>
+    <td mat-cell *matCellDef="let element">
+        <!-- <mat-slide-toggle [id]="element.invoiceID" name ="element.invoiceNumber" *ngIf=" element.documentType == 'SC' &&  element.currentStatusCode == 'Not Printed'">
+      </mat-slide-toggle></td>  -->
+      <label class="switch" *ngIf=" element.documentType == 'SC' &&  element.currentStatusCode == 'Not Printed'">
+        <input type="checkbox" [id]="element.invoiceID">
+        <span class="slider"></span>
+      </label>
+      <!-- <label class="switch" *ngIf=" element.documentType == 'SC' &&  element.currentStatusCode == 'Not Printed'">
+        <input type="checkbox" [id]="element.invoiceID" >
+        <span class="slider round"></span>
+      </label>  -->
+  </ng-container>
+    
+  
+   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
