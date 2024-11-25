@@ -20,11 +20,12 @@ import { RouterModule } from '@angular/router';
 import { MemberDetailsComponent } from './member-details/member-details.component';  // Import RouterModule
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { EventCardComponent } from './event-card/event-card.component'; // Import the AppRoutingModule
+import { EventCardComponent } from './event-card/event-card.component';
+import { FooterComponent } from './footer/footer.component'; // Import the AppRoutingModule
 
 
 @NgModule({
-  declarations: [TabGroupBasicExample, HeaderComponent, DocumentsTableComponent, LoginComponent, HeroComponent, MembersSectionComponent,MemberCardComponent, EventsSectionComponent, MemberDetailsComponent, HomeComponent, EventCardComponent],
+  declarations: [TabGroupBasicExample, HeaderComponent, DocumentsTableComponent, LoginComponent, HeroComponent, MembersSectionComponent,MemberCardComponent, EventsSectionComponent, MemberDetailsComponent, HomeComponent, EventCardComponent, FooterComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
