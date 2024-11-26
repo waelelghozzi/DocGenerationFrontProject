@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; // Import ActivatedRoute to access route parameters
 
 @Component({
@@ -8,7 +8,21 @@ import { ActivatedRoute } from '@angular/router'; // Import ActivatedRoute to ac
 })
 export class MemberDetailsComponent implements OnInit {
   memberId: string | null = null;  // This will store the member's ID from the URL
-
+  member!: {
+    id :string;
+    name: string;
+    role: string;
+    imageUrl: string;
+    email: string;
+    phone: string;
+    description: string;
+    socialLinks?: {
+      linkedin?: string;
+      twitter?: string;
+      github?: string;
+    };
+    skills?: string[];
+  };
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {

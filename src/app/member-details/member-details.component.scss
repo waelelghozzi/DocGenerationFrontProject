@@ -1,0 +1,62 @@
+.profile-page{
+    display: flex;
+    flex-direction: column;
+}
+.profile-picture{
+    margin: 1.5rem;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+}
+.profile-header{
+    display: flex;
+    flex-direction: row;
+    margin: 2.5rem 2.5rem 0.5rem 2.5rem;
+    background-color: white;
+    border-radius: 15px;
+}
+.profile-info{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+}
+.contact-info{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    text-justify: center;
+}
+.push {
+    margin-left: auto;
+}
+.details-section{
+    display: flex;
+    flex-direction: row;
+    margin:  0.5rem  2.5rem  0 2.5rem;
+}
+.personal-details{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    margin:  0 0.5rem  0.5rem 0;
+
+    width: 35%;
+}
+.academics{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    margin:  0 0  0.5rem 0.5rem;
+    width: 100%;
+}
+.social-network{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 2.5rem 2.5rem 2.5rem;
+    background-color: white;
+    border-radius: 15px;
+}

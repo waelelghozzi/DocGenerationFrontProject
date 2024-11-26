@@ -7,11 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MemberCardComponent implements OnInit {
   @Input() member!: {
-    id: string, 
-    name: string; 
-    designation: string; 
-    bio: string; 
-    avatarUrl: string;
+    id :string;
+    name: string;
+    role: string;
+    imageUrl: string;
+    email: string;
+    phone: string;
+    description: string;
+    socialLinks?: {
+      linkedin?: string;
+      twitter?: string;
+      github?: string;
+    };
+    skills?: string[];
   };
 
   constructor() {}

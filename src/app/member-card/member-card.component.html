@@ -1,15 +1,15 @@
 <div class="p-3 mx-auto bg-white rounded shadow-sm" style="max-width: 24rem;">
   <div class="d-flex flex-column align-items-center gap-3">
     <div class="position-relative">
-      <img [src]="member.avatarUrl" [alt]="member.name + ' profile picture'"
+      <img [src]="member.imageUrl" [alt]="member.name + ' profile picture'"
            class="rounded-circle" style="width: 8rem; height: 8rem; object-fit: cover;"
            (error)="handleImageError($event)">
     </div>
     <div class="text-center">
       <h2 class="h5 mb-2">{{member.name}}</h2>
-      <p class="text-muted mb-1">{{member.designation}}</p>
+      <p class="text-muted mb-1">{{member.description}}</p>
     </div>
-    <p class="text-secondary text-center small">{{member.bio}}</p>
+    <p class="text-secondary text-center small">{{member.role}}</p>
     <!-- <div class="d-flex gap-2">
       <button *ngFor="let social of member.socialLinks"
               [attr.aria-label]="'Visit ' + social.platform + ' profile'"
