@@ -42,7 +42,7 @@
     background-color: white;
     border-radius: 15px;
     margin:  0 0.5rem  0.5rem 0;
-
+    padding: 2.5rem;
     width: 35%;
 }
 .academics{
@@ -59,4 +59,17 @@
     margin: 0.5rem 2.5rem 2.5rem 2.5rem;
     background-color: white;
     border-radius: 15px;
+}
+.sub-personal-details{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.sub-personal-details .personal-detail{
+width: 50%;
+}
+.personal-detail{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
