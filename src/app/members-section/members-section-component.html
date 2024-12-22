@@ -2,7 +2,7 @@
   <h2 style="text-align: center;">Our core team members</h2>
   <div class="members-wrapper">
     <div *ngFor="let member of members" class="member-card">
-        <app-member-card [member]="member" (click)="navigateToDetails(member.id)"></app-member-card>
+      <app-member-card [member]="member" (click)="navigateToDetails(member.id)"></app-member-card>
     </div>
   </div>
 </div>

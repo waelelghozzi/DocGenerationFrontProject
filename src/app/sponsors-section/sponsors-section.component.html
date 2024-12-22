@@ -1,0 +1,13 @@
+<div class="sponsors-section">
+  <h2 style="text-align: center;">Latest sponsors</h2>
+  <div class="sponsors-wrapper">
+    <ng-container *ngFor="let sponsor of sponsors; let i = index">
+      <div class="sponsor-card">
+        <app-sponsor-card [sponsor]="sponsor" (click)="navigateToDetails(sponsor.id)"></app-sponsor-card>
+      </div>
+      <div *ngIf="i < sponsors.length - 1" class="vertical-line"></div>
+    </ng-container>
+  </div>
+</div>
+
+  

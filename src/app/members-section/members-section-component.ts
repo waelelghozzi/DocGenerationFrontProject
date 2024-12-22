@@ -115,19 +115,6 @@ export class MembersSectionComponent {
         github: 'https://github.com/michaelbrown',
       },
       skills: ['Node.js', 'Express', 'MongoDB', 'SQL', 'REST APIs']
-    },
-    {
-      id: '4',
-      name: 'Michael Brown',
-      role: 'Backend Developer',
-      imageUrl: 'https://images.unsplash.com/photo-1502767089025-6572583495b9',
-      email: 'michael.brown@example.com',
-      phone: '+1 555-345-6789',
-      description: 'Focused on building scalable APIs and ensuring data integrity.',
-      socialLinks: {
-        github: 'https://github.com/michaelbrown',
-      },
-      skills: ['Node.js', 'Express', 'MongoDB', 'SQL', 'REST APIs']
     }
   ];
   

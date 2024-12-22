@@ -1,9 +1,0 @@
-<div class="events-section">
-    <h2 style="text-align: center;">Latest events</h2>
-    <div class="events-wrapper">
-      <div *ngFor="let event of events" class="event-card">
-          <app-event-card [event]="event" (click)="navigateToDetails(event.id)"></app-event-card>
-      </div>
-    </div>
-  </div>
-  

@@ -2,20 +2,20 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-events-section',
-  templateUrl: './events-section.component.html',
-  styleUrls: ['./events-section.component.scss']
+  selector: 'app-sponsors-section',
+  templateUrl: './sponsors-section.component.html',
+  styleUrls: ['./sponsors-section.component.scss']
 })
-export class EventsSectionComponent {
+export class SponsorsSectionComponent {
   constructor(private router: Router) {}
-  events = [
+  sponsors = [
     { 
       id:'1',
       title:'formation git',
       name: 'Sarah Johnson', 
       designation: 'UX Designer', 
       bio: 'User-centered design.', 
-      date:'11/11/2024',
+      partnershipDate:'11/11/2024',
     },
     { 
       id:'2',
@@ -23,7 +23,7 @@ export class EventsSectionComponent {
       name: 'John Doe', 
       designation: 'Frontend Developer', 
       bio: 'Love creating modern UIs.',
-      date:'11/11/2024',
+      partnershipDate:'11/11/2024',
     },
     { 
       id:'3',
@@ -31,7 +31,7 @@ export class EventsSectionComponent {
       name: 'Emily Smith', 
       designation: 'Project Manager', 
       bio: 'Efficient and organized.', 
-      date:'11/11/2024',
+      partnershipDate:'11/11/2024',
     }
   ];
 

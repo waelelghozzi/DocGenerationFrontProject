@@ -1,4 +1,4 @@
-.events-section {
+.sponsors-section {
     display: flex;
     flex-direction: column;
     overflow: hidden; // Ensure the overflow is hidden in the parent container
@@ -7,7 +7,7 @@
     padding: 2rem;
   }
   
-  .events-wrapper {
+  .sponsors-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -17,12 +17,26 @@
     padding: 1rem 0;
     margin: 0 2rem; // Adjust margin to fit layout
   }
-  .events-wrapper::-webkit-scrollbar {
+  .sponsors-wrapper::-webkit-scrollbar {
     display: none; /* Webkit-based browsers */
   }
+  .sponsors-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Adjust gap as needed */
+  }
   
-  .event-card {
-    flex: 0 0 auto; // Prevent flex shrinking or growing
+  
+  .vertical-line {
+    width: 3px; /* Width of the line */
+    height: auto; /* Adjust height to match your design */
+    background-color: #ccc; /* Line color */
+    align-self: stretch; /* Make it take the full height */
+  }
+  
+  .sponsor-card {
+    flex: 0 0 auto; // Prsponsor flex shrinking or growing
     width: 500px; // Adjust card size
   }
   
